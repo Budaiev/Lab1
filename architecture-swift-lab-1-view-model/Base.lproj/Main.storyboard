@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SNZ-AG-0he">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="vZ0-B3-BWq">
+            <objects>
+                <navigationController id="SNZ-AG-0he" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sGj-2q-8gX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hok-8y-rrO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pyc-R3-tU5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-617" y="139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="architecture_swift_lab_1_view_model" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGD-yK-ZVO">
+                                <rect key="frame" x="16" y="124" width="163.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="AYe-Ul-N57"/>
+                                </constraints>
+                                <state key="normal" title="Cats"/>
+                                <connections>
+                                    <action selector="catsButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="36Z-nV-itU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVl-9W-Ryi">
+                                <rect key="frame" x="195.5" y="124" width="163.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ciU-sN-Rt9"/>
+                                </constraints>
+                                <state key="normal" title="Dogs"/>
+                                <connections>
+                                    <action selector="dogsButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UGH-En-BCR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wVl-9W-Ryi" secondAttribute="trailing" constant="16" id="75o-Je-Kjl"/>
+                            <constraint firstItem="wVl-9W-Ryi" firstAttribute="width" secondItem="hGD-yK-ZVO" secondAttribute="width" id="XIT-fe-Jul"/>
+                            <constraint firstItem="hGD-yK-ZVO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="knA-Bq-16V"/>
+                            <constraint firstItem="hGD-yK-ZVO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="kuv-uW-bGf"/>
+                            <constraint firstItem="wVl-9W-Ryi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="tjF-xF-6db"/>
+                            <constraint firstItem="wVl-9W-Ryi" firstAttribute="leading" secondItem="hGD-yK-ZVO" secondAttribute="trailing" constant="16" id="yKj-1v-cZl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cQ8-xM-eZl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="Nqt-Iw-hgB">
+            <objects>
+                <viewController storyboardIdentifier="detailsVC" id="EVa-V1-We5" customClass="DetailsViewController" customModule="architecture_swift_lab_1_view_model" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kTQ-n3-pN5"/>
+                        <viewControllerLayoutGuide type="bottom" id="bc0-oI-iWM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ugg-jN-P3Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cats_image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="TRM-Pm-xbn">
+                                <rect key="frame" x="16" y="28" width="343" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TRM-Pm-xbn" secondAttribute="height" multiplier="56:33" id="yBF-2n-wQJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqF-cO-5EG">
+                                <rect key="frame" x="16" y="246" width="343" height="405"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TRM-Pm-xbn" firstAttribute="top" secondItem="kTQ-n3-pN5" secondAttribute="bottom" constant="8" id="2Nf-Le-tbM"/>
+                            <constraint firstAttribute="trailing" secondItem="qqF-cO-5EG" secondAttribute="trailing" constant="16" id="HgH-sM-M82"/>
+                            <constraint firstItem="TRM-Pm-xbn" firstAttribute="leading" secondItem="Ugg-jN-P3Y" secondAttribute="leading" constant="16" id="Mgt-fI-lrE"/>
+                            <constraint firstItem="bc0-oI-iWM" firstAttribute="top" secondItem="qqF-cO-5EG" secondAttribute="bottom" constant="16" id="WNS-rU-6ml"/>
+                            <constraint firstAttribute="trailing" secondItem="TRM-Pm-xbn" secondAttribute="trailing" constant="16" id="nwf-T8-dSP"/>
+                            <constraint firstItem="qqF-cO-5EG" firstAttribute="top" secondItem="TRM-Pm-xbn" secondAttribute="bottom" constant="16" id="tcX-As-gK0"/>
+                            <constraint firstItem="qqF-cO-5EG" firstAttribute="leading" secondItem="Ugg-jN-P3Y" secondAttribute="leading" constant="16" id="zp8-HY-aMe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailsLabel" destination="qqF-cO-5EG" id="Qaa-1X-BUQ"/>
+                        <outlet property="imageView" destination="TRM-Pm-xbn" id="KKU-MG-RG1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMU-Cc-nGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861.60000000000002" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cats_image.jpg" width="582" height="328"/>
+    </resources>
+</document>
